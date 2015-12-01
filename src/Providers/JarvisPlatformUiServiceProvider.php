@@ -1,6 +1,6 @@
 <?php
 
-namespace Hechoenenlaravel\JarvisPlatformUi\Providers;
+namespace Hechoenlaravel\JarvisPlatformUi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
