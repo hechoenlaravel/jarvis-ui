@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @include('partials.meta')
+        @include('jplatformui::partials.meta')
     </head>
     <body class="skin-purple sidebar-mini">
         <div class="wrapper">
-            @include('partials.nav')
+            @include('jplatformui::partials.nav')
             <aside class="main-sidebar">
-                @include('partials.sidebar')
+                @include('jplatformui::partials.sidebar')
             </aside>
             <div class="content-wrapper">
                 <section class="content-header">
@@ -27,6 +27,6 @@
                 <strong>Copyright © {{date('Y')}}</strong>
             </footer>
         </div>
-        @include('partials.footer_meta')
+        @include('jplatformui::partials.footer_meta')
     </body>
 </html>
