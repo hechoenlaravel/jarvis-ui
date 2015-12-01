@@ -4,10 +4,16 @@ namespace Hechoenenlaravel\JarvisPlatformUi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class JarvisPlatformUiServiceProvider
+ * @package Hechoenenlaravel\JarvisPlatformUi\Providers
+ */
 class JarvisPlatformUiServiceProvider extends ServiceProvider
 {
 
-
+    /**
+     * Register package stuff
+     */
     public function register()
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'jplatformui');
