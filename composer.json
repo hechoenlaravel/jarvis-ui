@@ -1,0 +1,26 @@
+{
+	"name": "hechoenlaravel/jarvis-ui",
+	"description": "User Interface and assets for Jarvis Platform",
+	"keywords": ["JarvisApp", "Laravel Framework", "Business Application Platform", "BAP"],
+	"license" : "MIT",
+	"authors": [
+		{
+			"name": "Jose Fonseca",
+			"email": "jose@ditecnologia.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9",
+		"hechoenlaravel/jarvis-platform" : "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hechoenlaravel\\JarvisPlatformUi\\": "src/"
+		}
+	},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    }
+}
