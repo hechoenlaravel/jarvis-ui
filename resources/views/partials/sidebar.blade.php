@@ -6,8 +6,7 @@
             </div>
             <div class="pull-left info">
                 <p>{{Auth::user()->name}}</p>
-                <a href="{{route('me.profile', Auth::user()->uuid)}}"><i class="fa fa-arrow-right"></i> Mi Perfil</a>
-
+                <a href="{{route('user.profile', Auth::user()->uuid)}}"><i class="fa fa-arrow-right"></i> Mi Perfil</a>
             </div>
         </div>
         <ul class="sidebar-menu">

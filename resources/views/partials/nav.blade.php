@@ -27,7 +27,7 @@
                         <li class="user-body">
                             <div class="row">
                                 <div class="col-xs-12 text-center">
-                                    <a href="{{route('me.profile', Auth::user()->uuid)}}">Mi Perfil</a>
+                                    <a href="{{route('user.profile', Auth::user()->uuid)}}">Mi Perfil</a>
                                 </div>
                             </div>
                         </li>
