@@ -22,6 +22,14 @@
                             <p>
                                 {{Auth::user()->name}}
                             </p>
+
+                        </li>
+                        <li class="user-body">
+                            <div class="row">
+                                <div class="col-xs-12 text-center">
+                                    <a href="{{route('me.profile', Auth::user()->uuid)}}">Mi Perfil</a>
+                                </div>
+                            </div>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
