@@ -289,8 +289,8 @@
 }
 
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: #357ebd;
-  border-color: #3071a9;
+  background-color: #357ebd !important;
+  border-color: #3071a9 !important;
   color: #fff;
 }
 
