@@ -53,6 +53,7 @@ elixir(function (mix) {
     "../../components/Sortable/Sortable.js",
     "../../components/Sortable/ng-sortable.js",
     "../../components/ng-flow/dist/ng-flow-standalone.min.js",
+    "../../components/teamdf/jquery-number/jquery.number.js",
     "adminlte.js",
     "app.js"
   ]);

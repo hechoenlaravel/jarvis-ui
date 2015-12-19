@@ -167,4 +167,6 @@ $(function () {
                 }
             });
     });
+    /** jquery number **/
+    $('.number').number( true, 0 );
 });
