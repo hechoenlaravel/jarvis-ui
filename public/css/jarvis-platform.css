@@ -2637,6 +2637,9 @@ table.text-center th {
   height: 250px;
   overflow: auto;
 }
+.direct-chat-messages.comments {
+  height: auto;
+}
 .direct-chat-msg,
 .direct-chat-text {
   display: block;
