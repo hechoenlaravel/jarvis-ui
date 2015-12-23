@@ -3,7 +3,7 @@ var JarvisPlatform = angular.module('JarvisPlatform', ['angular-loading-bar', 'n
         cfpLoadingBarProvider.includeSpinner = false;
     }]);
 /** Compile directive to bring html from backend and have Angular evaluate it **/
-JarvisPlatform.directive('compile', function ($compile) {
+JarvisPlatform.directive('compile', ['$compile', function ($compile) {
     return function (scope, element, attrs) {
         scope.$watch(
             function (scope) {
@@ -15,7 +15,7 @@ JarvisPlatform.directive('compile', function ($compile) {
             }
         );
     };
-});
+}]);
 
 function HandleErrorResponse(data, code) {
     $('button').button('reset');
@@ -84,7 +84,9 @@ $(function () {
     }
     /** select2 **/
     $('.select2').select2({
-        language: 'es'
+        language: 'es',
+        allowClear: true,
+        placeholder: "Seleccione una opción"
     });
     $(".wysihtml5").wysihtml5();
     window.dateRangeLocale = {
