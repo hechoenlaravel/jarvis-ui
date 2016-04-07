@@ -1,6 +1,11 @@
-var JarvisPlatform = angular.module('JarvisPlatform', ['angular-loading-bar', 'ngAnimate', 'as.sortable', 'tableSort', 'ng-sortable', 'flow'])
-    .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+var JarvisPlatform = angular.module('JarvisPlatform', ['angular-loading-bar', 'ngAnimate', 'as.sortable', 'tableSort', 'ng-sortable', 'flow', 'angular-plupload'])
+    .config(['cfpLoadingBarProvider', 'pluploadOptionProvider', function (cfpLoadingBarProvider, pluploadOptionProvider) {
         cfpLoadingBarProvider.includeSpinner = false;
+        pluploadOptionProvider.setOptions({
+            flash_swf_url: GLOBALS.site_url+'/components/Moxie.swf',
+            silverlight_xap_url: GLOBALS.site_url+'/components/Moxie.xap',
+            max_file_size: '100mb'
+        });
     }]);
 /** Compile directive to bring html from backend and have Angular evaluate it **/
 JarvisPlatform.directive('compile', ['$compile', function ($compile) {

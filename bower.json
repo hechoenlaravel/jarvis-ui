@@ -25,6 +25,7 @@
     "angular-tablesort": "~1.1.0",
     "Sortable": "~1.4.1",
     "ng-flow": "~2",
-    "teamdf/jquery-number": "jquery-number#~2.1.6"
+    "teamdf/jquery-number": "~2.1.6",
+    "angular-plupload": "^0.1.5"
   }
 }

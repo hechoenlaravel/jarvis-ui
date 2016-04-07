@@ -54,6 +54,8 @@ elixir(function (mix) {
     "../../components/Sortable/ng-sortable.js",
     "../../components/ng-flow/dist/ng-flow-standalone.min.js",
     "../../components/teamdf/jquery-number/jquery.number.js",
+    "../../components/plupload/js/plupload.full.min.js",
+    "../../components/angular-plupload/dist/angular-plupload.min.js",
     "adminlte.js",
     "app.js"
   ]);
