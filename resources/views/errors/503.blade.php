@@ -1,4 +1,4 @@
-@extends('jplatformui::layouts.withsidebar')
+@extends('jplatformui::layouts.main')
 @section('pageTitle')
     {{isset($pageTitle) ? $pageTitle : "503"}}
 @endsection
