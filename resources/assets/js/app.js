@@ -1,11 +1,12 @@
 var JarvisPlatform = angular.module('JarvisPlatform', ['angular-loading-bar', 'ngAnimate', 'as.sortable', 'tableSort', 'ng-sortable', 'flow', 'angular-plupload'])
-    .config(['cfpLoadingBarProvider', 'pluploadOptionProvider', function (cfpLoadingBarProvider, pluploadOptionProvider) {
-        cfpLoadingBarProvider.includeSpinner = false;
+    .config(['cfpLoadingBarProvider', 'pluploadOptionProvider', '$httpProvider', function (cfpLoadingBarProvider, pluploadOptionProvider, $httpProvider) {
+        cfpLoadingBarProvider.includeSpinner = true;
         pluploadOptionProvider.setOptions({
             flash_swf_url: GLOBALS.site_url+'/components/Moxie.swf',
             silverlight_xap_url: GLOBALS.site_url+'/components/Moxie.xap',
             max_file_size: '100mb'
         });
+        $httpProvider.interceptors.push('errorHandlingInterceptor');
     }]);
 /** Compile directive to bring html from backend and have Angular evaluate it **/
 JarvisPlatform.directive('compile', ['$compile', function ($compile) {
@@ -20,6 +21,20 @@ JarvisPlatform.directive('compile', ['$compile', function ($compile) {
             }
         );
     };
+}]);
+
+/** Http response interceptor for errors **/
+
+JarvisPlatform.factory('errorHandlingInterceptor', ['$q', function($q) {
+
+    var errorHandlingInterceptor = {
+        responseError : function(response) {
+            HandleErrorResponse(response.data, response.status);
+            return $q.reject(response);
+        }
+    };
+
+    return errorHandlingInterceptor;
 }]);
 
 function HandleErrorResponse(data, code) {
