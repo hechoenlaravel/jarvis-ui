@@ -12,7 +12,5 @@
         <ul class="sidebar-menu">
             <li class="header">Menu</li>
         </ul>
-        {!! MenuPing::render('sidebar') !!}
-        {!! MenuPing::render('config') !!}
     </section>
 </aside>

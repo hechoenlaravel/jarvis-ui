@@ -13,7 +13,7 @@
 <![endif]-->
 <script>
     var GLOBALS = {
-        site_url: '{{url()}}',
+        site_url: '{{url('')}}',
         datablesLang: '//cdn.datatables.net/plug-ins/1.10.7/i18n/Spanish.json',
         token: "{{csrf_token()}}"
     };
