@@ -9,8 +9,6 @@
                 <a href="{{route('user.profile', Auth::user()->uuid)}}"><i class="fa fa-arrow-right"></i> Mi Perfil</a>
             </div>
         </div>
-        <ul class="sidebar-menu">
-            <li class="header">Menu</li>
-        </ul>
+        {!! app('menu.service')->render('sidebar') !!}
     </section>
 </aside>
