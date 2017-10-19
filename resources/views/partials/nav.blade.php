@@ -8,7 +8,6 @@
             <span class="sr-only">Ver Menu</span>
         </a>
         <div class="navbar-custom-menu">
-            {!! MenuPing::render('topnav') !!}
             <ul class="nav navbar-nav">
                 @include('jarvisPlatform::notifications.navbar-notifications')
                 <li class="dropdown user user-menu">
